@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# local env / secrets
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel/
+
+# original (unoptimized) photo drops — web copies live in images/
+fences/
+
+# os / editor cruft
+.DS_Store
+Thumbs.db

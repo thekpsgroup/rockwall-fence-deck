@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FR49CR66EB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FR49CR66EB');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get a Free Fence or Deck Quote | Rockwall Fence &amp; Deck</title>
-<meta name="description" content="Get a free, written quote for a new fence, fence repair, deck build or deck staining in Royse City &amp; Rockwall County. Send photos — most quotes go out same day.">
+<meta name="description" content="Get a free, written estimate for a new fence, fence repair, deck build or deck staining in Royse City &amp; Rockwall County. Send photos — most estimates go out same day.">
 <link rel="canonical" href="https://www.rockwallfenceanddeck.com/quote.html">
 <meta property="og:title" content="Get a Free Fence or Deck Quote | Rockwall Fence &amp; Deck">
-<meta property="og:description" content="Free written quote for fences &amp; decks across Royse City &amp; Rockwall County.">
+<meta property="og:description" content="Free written estimate for fences &amp; decks across Royse City &amp; Rockwall County.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://www.rockwallfenceanddeck.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.rockwallfenceanddeck.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="mark">▤</span> Rockwall Fence &amp; Deck</a>
+    <a class="brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M4 9.4 5.7 7.2 7.4 9.4V19H4z"/><path d="M10.3 7.4 12 5.2 13.7 7.4V19h-3.4z"/><path d="M16.6 9.4 18.3 7.2 20 9.4V19h-3.4z"/></svg></span> Rockwall Fence &amp; Deck</a>
     <div class="menu-links">
       <nav>
         <a href="fence-installation.html">Fences</a>
@@ -25,22 +45,27 @@
         <a href="service-area.html">Service Area</a>
       </nav>
       <a class="phone" href="tel:+14698871100">(469) 887-1100</a>
-      <a class="btn" href="quote.html">Get My Free Quote</a>
+      <a class="btn" href="quote.html">Free estimate</a>
     </div>
   </div>
 </header>
 
 <section class="section" style="background:linear-gradient(160deg,var(--navy),#1a3322);color:#fff;padding-top:54px;padding-bottom:30px">
   <div class="wrap center">
-    <span class="eyebrow">Free • No Obligation</span>
-    <h1 style="color:#fff">Get Your Free Written Quote</h1>
-    <p class="lead" style="color:#d7e2d0">Tell us about your project and add a couple photos. Most quotes go out the same day.</p>
+    <span class="eyebrow">Free Estimate</span>
+    <h1 style="color:#fff">Get your free estimate</h1>
+    <p class="lead" style="color:#d7e2d0"><b style="color:#fff">The fastest way to get a price is to call.</b> We come out, measure, and give you a written estimate, and most jobs start the next week. You can also fill out the form below.</p>
+    <div class="hero-cta" style="justify-content:center;margin-top:8px">
+      <a class="btn lg" href="tel:+14698871100">Call (469) 887-1100</a>
+    </div>
   </div>
 </section>
 
 <section class="section" style="padding-top:40px">
   <div class="wrap" style="max-width:720px">
     <div class="qcard">
+      <a class="callbar" href="tel:+14698871100"><span>Call (469) 887-1100</span><small>Usually the fastest</small></a>
+      <div class="ordiv"><span>or fill out the form</span></div>
       <!-- ▼ SET YOUR FORM ENDPOINT (see README) ▼ -->
       <form action="/api/send-quote" method="POST" enctype="multipart/form-data">
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
@@ -54,7 +79,7 @@
         <div class="field"><label>Property address</label><input type="text" name="address" placeholder="Street address"></div>
         <div class="grid2">
           <div class="field"><label>City <span class="req">*</span></label>
-            <select name="city" required>
+            <select name="city" required aria-label="City">
               <option value="">Select…</option>
               <option>Royse City</option><option>Fate</option><option>Rockwall</option>
               <option>Heath</option><option>McLendon-Chisholm</option><option>Caddo Mills</option>
@@ -82,7 +107,7 @@
             <input type="text" name="size" placeholder="e.g. 150 ft of fence, or 12x16 deck">
           </div>
           <div class="field"><label>How soon?</label>
-            <select name="timeline">
+            <select name="timeline" aria-label="How soon do you need it">
               <option value="">Select…</option>
               <option>As soon as possible</option><option>Within a month</option>
               <option>1–3 months</option><option>Just getting prices</option>
@@ -90,19 +115,19 @@
           </div>
         </div>
 
-        <div class="field"><label>Photos (optional — speeds up your price)</label><input type="file" name="photos" accept="image/*" multiple></div>
-        <div class="field"><label>Anything else?</label><textarea name="notes" placeholder="Material preference, gates, color, damage details…"></textarea></div>
+        <div class="field"><label>Photos (optional — speeds up your price)</label><input type="file" name="photos" accept="image/*" multiple aria-label="Upload project photos"></div>
+        <div class="field"><label>Anything else?</label><textarea name="notes" placeholder="Material preference, gates, color, damage details…" aria-label="Additional details"></textarea></div>
 
-        <button class="btn lg" type="submit" style="width:100%;justify-content:center">Get My Free Quote →</button>
-        <p class="formnote">No spam, ever. We only use your info to prepare your quote. Or call us at <a href="tel:+14698871100">(469) 887-1100</a>.</p>
+        <button class="btn lg" type="submit" style="width:100%;justify-content:center">Get my free estimate →</button>
+        <p class="formnote">We only use your info to send your estimate. Or call us at <a href="tel:+14698871100">(469) 887-1100</a>.</p>
       </form>
     </div>
 
     <div class="badges" style="margin-top:26px">
-      <span class="badge">🪵 Quality Cedar</span>
-      <span class="badge">🛡️ Licensed &amp; Insured</span>
-      <span class="badge">📝 Written Warranty</span>
-      <span class="badge">⚡ Same-Day Quotes</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="4" rx="1"/><rect x="3" y="11" width="18" height="4" rx="1"/><rect x="3" y="17" width="13" height="3" rx="1"/></svg> Quality Cedar</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg> Written Warranty</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg> Same-Day Quotes</span>
     </div>
   </div>
 </section>
@@ -111,7 +136,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <div class="fbrand"><span class="mark" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center">▤</span> Rockwall Fence &amp; Deck</div>
+        <div class="fbrand"><span class="mark" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M4 9.4 5.7 7.2 7.4 9.4V19H4z"/><path d="M10.3 7.4 12 5.2 13.7 7.4V19h-3.4z"/><path d="M16.6 9.4 18.3 7.2 20 9.4V19h-3.4z"/></svg></span> Rockwall Fence &amp; Deck</div>
         <p>Custom cedar fences &amp; decks for homeowners across Royse City and Rockwall County, Texas.</p>
         <p><a href="tel:+14698871100">(469) 887-1100</a><br><a href="mailto:quotes@rockwallfenceanddeck.com">quotes@rockwallfenceanddeck.com</a></p>
       </div>
@@ -123,11 +148,11 @@
       </ul></div>
       <div><h4>Company</h4><ul>
         <li><a href="service-area.html">Service Area</a></li>
-        <li><a href="quote.html">Get a Free Quote</a></li>
+        <li><a href="quote.html">Free estimate</a></li>
         <li><a href="tel:+14698871100">Call Us</a></li>
       </ul></div>
     </div>
-    <div class="fbottom"><span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189</span><span>Licensed &amp; Insured · Locally Owned</span></div>
+    <div class="fbottom"><span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189 · <a href="https://www.i30builders.com" rel="noopener" target="_blank">An i30 Builders company</a></span><span>Licensed &amp; Insured · Locally Owned</span></div>
   </div>
 </footer>
 <div class="mobilecta"><a class="btn" href="tel:+14698871100">Call (469) 887-1100</a></div>

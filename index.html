@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FR49CR66EB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FR49CR66EB');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fence &amp; Deck Builder in Royse City, TX | Rockwall Fence &amp; Deck</title>
@@ -9,13 +18,25 @@
 <meta property="og:title" content="Fence &amp; Deck Builder in Royse City, TX">
 <meta property="og:description" content="Cedar fences, custom decks, repairs &amp; staining across Royse City &amp; Rockwall County. Free quote.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.rockwallfenceanddeck.com/">
+<meta property="og:image" content="https://www.rockwallfenceanddeck.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.rockwallfenceanddeck.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="mark">▤</span> Rockwall Fence &amp; Deck</a>
+    <a class="brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M4 9.4 5.7 7.2 7.4 9.4V19H4z"/><path d="M10.3 7.4 12 5.2 13.7 7.4V19h-3.4z"/><path d="M16.6 9.4 18.3 7.2 20 9.4V19h-3.4z"/></svg></span> Rockwall Fence &amp; Deck</a>
     <div class="menu-links">
       <nav>
         <a href="fence-installation.html">Fences</a>
@@ -25,17 +46,17 @@
         <a href="service-area.html">Service Area</a>
       </nav>
       <a class="phone" href="tel:+14698871100">(469) 887-1100</a>
-      <a class="btn" href="quote.html">Get My Free Quote</a>
+      <a class="btn" href="quote.html">Free estimate</a>
     </div>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero imgbg" style="--bg:url('images/horizontal-cedar-fence-gate.jpg')">
   <div class="wrap">
     <div>
       <span class="eyebrow">Royse City • Fate • Rockwall • Heath</span>
-      <h1>Custom Fences &amp; Decks, Built to Last in Texas</h1>
-      <p>Cedar privacy fences and custom decks for homeowners across Royse City and Rockwall County. New builds, repairs and staining — done right, on schedule, and warrantied.</p>
+      <h1>Fences &amp; Decks in Royse City, TX</h1>
+      <p>New fences, custom decks, repairs and staining for homeowners across Royse City and Rockwall County. Licensed, insured, and warrantied.</p>
       <ul class="trust">
         <li><b>✓</b> Free On-Site Estimates</li>
         <li><b>✓</b> Licensed &amp; Insured</li>
@@ -43,14 +64,16 @@
         <li><b>✓</b> Locally Owned</li>
       </ul>
       <div class="hero-cta">
-        <a class="btn lg" href="#quote">Get My Free Quote →</a>
-        <a class="btn ghost lg" href="tel:+14698871100">Call (469) 887-1100</a>
+        <a class="btn lg" href="tel:+14698871100">Call (469) 887-1100</a>
+        <a class="btn ghost lg" href="#quote">Get a free estimate →</a>
       </div>
+      <p class="fastline"><b>The fastest way to get a price is to call.</b> We come out, measure, and give you a written estimate — and most jobs start the next week.</p>
     </div>
 
     <div class="qcard" id="quote">
-      <h3>Get Your Free Quote</h3>
-      <p class="sub">Tell us about your project and add a couple photos — most quotes go out the same day.</p>
+      <h3>Get a free estimate</h3>
+      <a class="callbar" href="tel:+14698871100"><span>Call (469) 887-1100</span><small>Usually the fastest</small></a>
+      <div class="ordiv"><span>or fill out the form</span></div>
       <!-- ▼ SET YOUR FORM ENDPOINT (see README) ▼ -->
       <form action="/api/send-quote" method="POST" enctype="multipart/form-data">
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
@@ -65,7 +88,7 @@
           </div>
           <div class="field">
             <label>City <span class="req">*</span></label>
-            <select name="city" required>
+            <select name="city" required aria-label="City">
               <option value="">Select…</option>
               <option>Royse City</option><option>Fate</option><option>Rockwall</option>
               <option>Heath</option><option>McLendon-Chisholm</option><option>Caddo Mills</option>
@@ -87,10 +110,10 @@
         </div>
         <div class="field">
           <label>Photos (optional — speeds up your price)</label>
-          <input type="file" name="photos" accept="image/*" multiple>
+          <input type="file" name="photos" accept="image/*" multiple aria-label="Upload project photos">
         </div>
-        <button class="btn lg" type="submit" style="width:100%;justify-content:center">Get My Free Quote →</button>
-        <p class="formnote">No spam. We only use your info to send your quote.</p>
+        <button class="btn lg" type="submit" style="width:100%;justify-content:center">Get my free estimate →</button>
+        <p class="formnote">We only use your info to send your estimate.</p>
       </form>
     </div>
   </div>
@@ -99,34 +122,34 @@
 <!-- SERVICES -->
 <section class="section">
   <div class="wrap center">
-    <span class="eyebrow">What We Build</span>
-    <h2>Fences &amp; Decks Done Right</h2>
-    <p class="lead">Quality cedar, solid framing and clean lines — built to handle Texas heat, storms and sun for years.</p>
+    <span class="eyebrow">Our Services</span>
+    <h2>What We Build</h2>
+    <p class="lead">Cedar fences, custom decks, repairs and staining for homes across Rockwall County.</p>
   </div>
   <div class="wrap" style="margin-top:38px">
     <div class="cards">
       <div class="card">
-        <div class="ic">🪵</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="4" rx="1"/><rect x="3" y="11" width="18" height="4" rx="1"/><rect x="3" y="17" width="13" height="3" rx="1"/></svg></div>
         <h3>Fence Installation</h3>
         <p>Cedar privacy and board-on-board fences built with proper posts, concrete footings and quality lumber.</p>
         <a class="more" href="fence-installation.html">See fence building →</a>
       </div>
       <div class="card">
-        <div class="ic">🔧</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <h3>Fence Repair</h3>
         <p>Leaning sections, broken pickets, rotted posts, storm damage — repaired or replaced fast.</p>
         <a class="more" href="fence-repair.html">See fence repair →</a>
       </div>
       <div class="card">
-        <div class="ic">🛠️</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3>Deck Building</h3>
         <p>Custom decks designed for your yard, framed to code and built to last through Texas summers.</p>
         <a class="more" href="deck-building.html">See deck building →</a>
       </div>
       <div class="card">
-        <div class="ic">🖌️</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3 21 10l-4 4-7-7z"/><path d="M10 7 4 13a2.5 2.5 0 0 0 0 4 2.5 2.5 0 0 0 4 0l6-6"/><path d="M4 21l2-2"/></svg></div>
         <h3>Deck Staining &amp; Restoration</h3>
-        <p>Bring a weathered deck back to life with a proper clean, sand and fresh stain or seal.</p>
+        <p>We clean, sand and re-stain weathered decks and fences to protect the wood.</p>
         <a class="more" href="deck-staining-restoration.html">See staining →</a>
       </div>
     </div>
@@ -138,35 +161,43 @@
   <div class="wrap center">
     <span class="eyebrow">Recent Work</span>
     <h2>Fences We've Built Around Rockwall County</h2>
-    <p class="lead">Real projects from real Texas yards — cedar privacy, horizontal board, ranch iron and more.</p>
+    <p class="lead">A few of the fences we've built around the area — cedar privacy, horizontal board, ranch and iron.</p>
   </div>
   <div class="wrap" style="margin-top:38px">
     <div class="gallery">
       <figure class="shot">
-        <img src="images/cedar-board-on-board-privacy-fence.jpg" alt="Stained cedar board-on-board privacy fence with cap and trim in Rockwall County, TX" loading="lazy" width="1500" height="2000">
+        <img src="images/cedar-board-on-board-privacy-fence.jpg" alt="Dark-stained cedar board-on-board privacy fence with cap and trim in Rockwall County, TX" loading="lazy" width="1200" height="1600">
         <figcaption>Board-on-board cedar with cap &amp; trim, dark stain</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/horizontal-cedar-fence-gate.jpg" alt="Horizontal cedar privacy fence with matching gate along a driveway" loading="lazy" width="2000" height="1500">
+        <img src="images/horizontal-cedar-fence-gate.jpg" alt="Horizontal cedar privacy fence with matching gate along a driveway" loading="lazy" width="1600" height="1200">
         <figcaption>Horizontal cedar privacy fence with gate</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/wrought-iron-ranch-fence.jpg" alt="Black wrought iron ranch-style fence bordering an open field" loading="lazy" width="1024" height="1536">
-        <figcaption>Ornamental iron ranch fence</figcaption>
-      </figure>
-      <figure class="shot">
-        <img src="images/cedar-privacy-fence-steel-posts.jpg" alt="Dog-ear cedar privacy fence built on galvanized steel posts" loading="lazy" width="1500" height="2000">
+        <img src="images/cedar-privacy-fence-steel-posts.jpg" alt="Cedar privacy fence built on galvanized steel posts" loading="lazy" width="1200" height="1600">
         <figcaption>Cedar privacy fence on steel posts</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/horizontal-cedar-fence-sloped-yard.jpg" alt="Horizontal cedar fence with gate stepped down a sloped front yard" loading="lazy" width="1920" height="960">
+        <img src="images/horizontal-cedar-fence-sloped-yard.jpg" alt="Horizontal cedar fence with gate stepped down a sloped front yard" loading="lazy" width="1600" height="812">
         <figcaption>Horizontal cedar on a sloped yard</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/wrought-iron-ranch-fence.jpg" alt="Black ornamental iron fence bordering an open field with homes in the distance" loading="lazy" width="1024" height="1536">
+        <figcaption>Ornamental iron fence on acreage</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/welded-wire-ranch-fence-gate.jpg" alt="Black welded-wire ranch fence with a matching swing gate on a rural lot" loading="lazy" width="1500" height="1125">
+        <figcaption>Welded-wire ranch fence &amp; gate</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="images/pipe-top-field-fence.jpg" alt="Black pipe-top wire field fence enclosing an open pasture" loading="lazy" width="1500" height="1125">
+        <figcaption>Pipe-top field &amp; pasture fence</figcaption>
       </figure>
       <figure class="shot cta-tile">
         <div>
           <h3>Want yours next?</h3>
-          <p>Free written quote, usually same day.</p>
-          <a class="btn" href="quote.html">Get My Free Quote →</a>
+          <p>Free written estimate, usually the same day.</p>
+          <a class="btn" href="quote.html">Get a free estimate →</a>
         </div>
       </figure>
     </div>
@@ -177,16 +208,16 @@
 <section class="section">
   <div class="wrap center">
     <span class="eyebrow">Why Homeowners Pick Us</span>
-    <h2>Built Solid. No Surprises.</h2>
+    <h2>What You Get With Us</h2>
   </div>
   <div class="wrap" style="margin-top:36px">
     <div class="feat">
-      <div class="item"><div class="b">🌲</div><div><h3>Quality Materials</h3><p>Real cedar and proper-grade lumber — not the cheapest boards that warp in a season.</p></div></div>
-      <div class="item"><div class="b">🧱</div><div><h3>Posts Set in Concrete</h3><p>Properly dug, set and braced posts so your fence stays straight for years.</p></div></div>
-      <div class="item"><div class="b">📐</div><div><h3>Built to Code</h3><p>Decks framed and fastened to last and to pass inspection where required.</p></div></div>
-      <div class="item"><div class="b">🛡️</div><div><h3>Licensed &amp; Insured</h3><p>Fully covered, with a written warranty on every build.</p></div></div>
-      <div class="item"><div class="b">📍</div><div><h3>Local to Rockwall County</h3><p>We live and work here. Your neighbors are our customers.</p></div></div>
-      <div class="item"><div class="b">💵</div><div><h3>Upfront Pricing</h3><p>Clear, written quotes before we start. No vague guesses.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 7 11h3l-4 7h12l-4-7h3z"/><path d="M11 18h2v3h-2z"/></svg></div><div><h3>Quality Materials</h3><p>Real cedar and proper-grade lumber — not the cheapest boards that warp in a season.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M3 15h18M9 4v6M15 10v5M9 15v5"/></svg></div><div><h3>Posts Set in Concrete</h3><p>Properly dug, set and braced posts so your fence stays straight for years.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 2 22 8 8 22 2 16z"/><path d="M14 6l2 2M11 9l2 2M8 12l2 2"/></svg></div><div><h3>Built to Code</h3><p>Decks framed and fastened to last and to pass inspection where required.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h3>Licensed &amp; Insured</h3><p>Fully covered, with a written warranty on every build.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>Local to Rockwall County</h3><p>We live and work here. Your neighbors are our customers.</p></div></div>
+      <div class="item"><div class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Upfront Pricing</h3><p>Clear, written estimates before we start.</p></div></div>
     </div>
   </div>
 </section>
@@ -195,13 +226,15 @@
 <section class="section alt">
   <div class="wrap center">
     <span class="eyebrow">How It Works</span>
-    <h2>Three Steps to a New Fence or Deck</h2>
+    <h2>What to Expect</h2>
+    <p class="lead">Four steps, start to finish:</p>
   </div>
   <div class="wrap" style="margin-top:46px">
     <div class="steps">
-      <div class="step"><h3>Request a Quote</h3><p>Send a few details and photos. We send a written estimate, usually the same day.</p></div>
-      <div class="step"><h3>Plan &amp; Schedule</h3><p>We confirm materials, layout and a build date that works for you.</p></div>
-      <div class="step"><h3>We Build It</h3><p>We show up on schedule, build it clean, and leave your yard better than we found it.</p></div>
+      <div class="step"><h3>Call or Request an Estimate</h3><p>Call us or fill out the form. Calling is usually the fastest.</p></div>
+      <div class="step"><h3>We Come Measure</h3><p>We come out, look at the space, and measure it. It's free.</p></div>
+      <div class="step"><h3>You Get a Written Estimate</h3><p>We give you a clear, written estimate, usually the same day.</p></div>
+      <div class="step"><h3>We Start — Often Next Week</h3><p>Once you approve it, we get you on the schedule. Most jobs start the next week.</p></div>
     </div>
   </div>
 </section>
@@ -211,16 +244,16 @@
   <div class="wrap">
     <div class="banner">
       <div>
-        <h2>Warrantied Workmanship</h2>
+        <h2>Licensed, Insured &amp; Warrantied</h2>
         <p>Quality lumber, posts set in concrete, and a written warranty on every fence and deck.</p>
       </div>
-      <a class="btn lg" href="quote.html">Start My Free Quote →</a>
+      <a class="btn lg" href="quote.html">Get a free estimate →</a>
     </div>
     <div class="badges" style="margin-top:26px">
-      <span class="badge">🪵 Quality Cedar</span>
-      <span class="badge">🛡️ Licensed &amp; Insured</span>
-      <span class="badge">📝 Written Warranty</span>
-      <span class="badge">📍 Locally Owned</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="4" rx="1"/><rect x="3" y="11" width="18" height="4" rx="1"/><rect x="3" y="17" width="13" height="3" rx="1"/></svg> Quality Cedar</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg> Written Warranty</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Locally Owned</span>
     </div>
   </div>
 </section>
@@ -229,7 +262,7 @@
 <section class="section alt">
   <div class="wrap center">
     <span class="eyebrow">Service Area</span>
-    <h2>Proudly Serving Royse City &amp; 20 Miles Around</h2>
+    <h2>Serving Royse City &amp; 20 Miles Around</h2>
     <p class="lead">Based in 75189 and serving homeowners across Rockwall, Hunt and Collin counties.</p>
     <p style="margin-top:18px;font-weight:600">Royse City · Fate · Rockwall · Heath · Caddo Mills · McLendon-Chisholm · Wylie · Sachse · Lavon · Nevada · Josephine · Greenville · Quinlan · Farmersville · Princeton &amp; more</p>
     <a class="btn dark lg" href="service-area.html" style="margin-top:22px">See Full Service Area →</a>
@@ -241,12 +274,12 @@
   <div class="wrap" style="max-width:780px">
     <div class="center"><span class="eyebrow">Questions</span><h2>Good to Know</h2></div>
     <div class="faq" style="margin-top:30px">
-      <details open><summary>How much does a new cedar fence cost?</summary><p>In our area, cedar privacy fences typically run about $35–$55 per linear foot installed — so a standard 150-ft backyard runs roughly $5,000–$8,000 depending on height, grade and gates. Send your details for an exact written quote.</p></details>
+      <details open><summary>How much does a new cedar fence cost?</summary><p>In our area, cedar privacy fences typically run about $35–$55 per linear foot installed — so a standard 150-ft backyard runs roughly $5,000–$8,000 depending on height, grade and gates. Send your details for an exact written estimate.</p></details>
       <details><summary>How much does a new deck cost?</summary><p>Most wood decks here run about $30–$60 per square foot built, depending on size, height, material and railings. We'll give you a clear written price after a quick look at your space.</p></details>
-      <details><summary>How long does a project take?</summary><p>Most residential fences go up in 1–3 days; decks usually take a few days to a week depending on size and design. We give you a realistic timeline with your quote.</p></details>
+      <details><summary>How long does a project take?</summary><p>Most residential fences go up in 1–3 days; decks usually take a few days to a week depending on size and design. We give you a realistic timeline with your estimate.</p></details>
       <details><summary>Do you handle repairs, or only new builds?</summary><p>Both. We repair leaning fences, broken pickets, rotted posts and storm damage, and we restore weathered decks with cleaning, sanding and fresh stain.</p></details>
     </div>
-    <div class="center" style="margin-top:30px"><a class="btn lg" href="quote.html">Get My Free Quote →</a></div>
+    <div class="center" style="margin-top:30px"><a class="btn lg" href="quote.html">Get a free estimate →</a></div>
   </div>
 </section>
 
@@ -254,7 +287,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <div class="fbrand"><span class="mark" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center">▤</span> Rockwall Fence &amp; Deck</div>
+        <div class="fbrand"><span class="mark" style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M4 9.4 5.7 7.2 7.4 9.4V19H4z"/><path d="M10.3 7.4 12 5.2 13.7 7.4V19h-3.4z"/><path d="M16.6 9.4 18.3 7.2 20 9.4V19h-3.4z"/></svg></span> Rockwall Fence &amp; Deck</div>
         <p>Custom cedar fences &amp; decks for homeowners across Royse City and Rockwall County, Texas.</p>
         <p><a href="tel:+14698871100">(469) 887-1100</a><br><a href="mailto:quotes@rockwallfenceanddeck.com">quotes@rockwallfenceanddeck.com</a></p>
       </div>
@@ -271,19 +304,19 @@
         <h4>Company</h4>
         <ul>
           <li><a href="service-area.html">Service Area</a></li>
-          <li><a href="quote.html">Get a Free Quote</a></li>
+          <li><a href="quote.html">Free estimate</a></li>
           <li><a href="tel:+14698871100">Call Us</a></li>
         </ul>
       </div>
     </div>
     <div class="fbottom">
-      <span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189</span>
+      <span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189 · <a href="https://www.i30builders.com" rel="noopener" target="_blank">An i30 Builders company</a></span>
       <span>Licensed &amp; Insured · Locally Owned</span>
     </div>
   </div>
 </footer>
 
-<div class="mobilecta"><a class="btn" href="quote.html">Get My Free Quote →</a></div>
+<div class="mobilecta"><a class="btn" href="tel:+14698871100">Call Now</a><a class="btn dark" href="quote.html">Free estimate</a></div>
 
 <script type="application/ld+json">
 {

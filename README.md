@@ -14,8 +14,14 @@ deck-staining-restoration.html     Service page
 service-area.html                  Local-SEO town list
 quote.html                         Dedicated quote form
 thank-you.html                     Post-submit confirmation
+404.html                           Friendly not-found page
 styles.css                         Shared styles
+favicon.svg / og.svg               Browser icon + social-share image
+images/                            Real "Recent Work" project photos (web-optimized)
+api/send-quote.js                  Serverless quote-form handler (emails leads via Resend)
 sitemap.xml / robots.txt           SEO crawl files
+vercel.json                        Clean-URL, caching & security-header config
+.gitignore                         Ignores node_modules, .env, original photo drops
 PLAN.md                            Business + funnel strategy
 ```
 
