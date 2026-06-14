@@ -86,7 +86,7 @@ The **form submission is the conversion event.** With address + service + size +
 has self-qualified before you ever talk to them — so you quote fast and book.
 
 **Trust without reviews/social** is carried on every page by: before/after-style project photos,
-"Licensed & Insured," a written warranty, locally owned + the actual town names, transparent price
+a written warranty, locally owned + the actual town names, transparent price
 ranges, and the "posts set in concrete / built to code" quality promise.
 
 ---

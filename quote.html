@@ -12,12 +12,13 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get a Free Fence or Deck Quote | Rockwall Fence &amp; Deck</title>
+<title>Get a Free Fence &amp; Deck Estimate | Rockwall Fence &amp; Deck</title>
 <meta name="description" content="Get a free, written estimate for a new fence, fence repair, deck build or deck staining in Royse City &amp; Rockwall County. Send photos — most estimates go out same day.">
 <link rel="canonical" href="https://www.rockwallfenceanddeck.com/quote.html">
-<meta property="og:title" content="Get a Free Fence or Deck Quote | Rockwall Fence &amp; Deck">
+<meta property="og:title" content="Get a Free Fence &amp; Deck Estimate | Rockwall Fence &amp; Deck">
 <meta property="og:description" content="Free written estimate for fences &amp; decks across Royse City &amp; Rockwall County.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.rockwallfenceanddeck.com/quote.html">
 <meta property="og:image" content="https://www.rockwallfenceanddeck.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -68,7 +69,7 @@
       <div class="ordiv"><span>or fill out the form</span></div>
       <!-- ▼ SET YOUR FORM ENDPOINT (see README) ▼ -->
       <form action="/api/send-quote" method="POST" enctype="multipart/form-data">
-        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leave this field blank">
 
         <div class="grid2">
           <div class="field"><label>Full name <span class="req">*</span></label><input type="text" name="name" required placeholder="Your name"></div>
@@ -115,7 +116,7 @@
           </div>
         </div>
 
-        <div class="field"><label>Photos (optional — speeds up your price)</label><input type="file" name="photos" accept="image/*" multiple aria-label="Upload project photos"></div>
+        <div class="field"><label>Photos (optional, up to 2 — speeds up your price)</label><input type="file" name="photos" accept="image/*" multiple aria-label="Upload project photos"></div>
         <div class="field"><label>Anything else?</label><textarea name="notes" placeholder="Material preference, gates, color, damage details…" aria-label="Additional details"></textarea></div>
 
         <button class="btn lg" type="submit" style="width:100%;justify-content:center">Get my free estimate →</button>
@@ -125,7 +126,7 @@
 
     <div class="badges" style="margin-top:26px">
       <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="4" rx="1"/><rect x="3" y="11" width="18" height="4" rx="1"/><rect x="3" y="17" width="13" height="3" rx="1"/></svg> Quality Cedar</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Insured</span>
       <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg> Written Warranty</span>
       <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg> Same-Day Quotes</span>
     </div>
@@ -152,9 +153,10 @@
         <li><a href="tel:+14698871100">Call Us</a></li>
       </ul></div>
     </div>
-    <div class="fbottom"><span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189 · <a href="https://www.i30builders.com" rel="noopener" target="_blank">An i30 Builders company</a></span><span>Licensed &amp; Insured · Locally Owned</span></div>
+    <div class="fbottom"><span>© 2026 Rockwall Fence &amp; Deck · Royse City, TX 75189 · <a href="https://www.i30builders.com" rel="noopener" target="_blank">An i30 Builders company</a> · <a href="privacy.html">Privacy</a></span><span>Insured · Locally Owned</span></div>
   </div>
 </footer>
 <div class="mobilecta"><a class="btn" href="tel:+14698871100">Call (469) 887-1100</a></div>
+<script src="form-enhance.js" defer></script>
 </body>
 </html>

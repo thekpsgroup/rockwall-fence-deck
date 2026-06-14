@@ -1,0 +1,6 @@
+# Don't ship these to production
+fences/
+node_modules
+.git
+.stock
+*.md

@@ -70,7 +70,7 @@ module.exports = async (req, res) => {
         ? `<p style="font-family:Arial,sans-serif;color:#555">${files.length} photo(s) attached.</p>`
         : "");
 
-    const attachments = files.slice(0, 4).map((f) => ({
+    const attachments = files.slice(0, 2).map((f) => ({
       filename: f.filename,
       content: f.content.toString("base64"),
     }));
@@ -117,7 +117,7 @@ function parseMultipart(req) {
     try {
       bb = Busboy({
         headers: req.headers,
-        limits: { fileSize: 4 * 1024 * 1024, files: 4 }, // 4 MB/file, up to 4 files
+        limits: { fileSize: 4 * 1024 * 1024, files: 2 }, // 4 MB/file, up to 2 files
       });
     } catch (e) {
       return reject(e);

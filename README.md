@@ -13,17 +13,23 @@ deck-building.html                 Service page
 deck-staining-restoration.html     Service page
 service-area.html                  Local-SEO town list
 quote.html                         Dedicated quote form
-thank-you.html                     Post-submit confirmation
+thank-you.html                     Post-submit confirmation (fires GA4 generate_lead event)
 404.html                           Friendly not-found page
+privacy.html                       Privacy policy (linked in footer)
 styles.css                         Shared styles
-favicon.svg / og.svg               Browser icon + social-share image
-images/                            Real "Recent Work" project photos (web-optimized)
+form-enhance.js                    Shrinks photos in-browser before upload
+favicon.svg / og.png               Browser icon + social-share image (+ icon-*.png, apple-touch-icon.png)
+images/                            "Recent Work" project photos (web-optimized)
 api/send-quote.js                  Serverless quote-form handler (emails leads via Resend)
 sitemap.xml / robots.txt           SEO crawl files
-vercel.json                        Clean-URL, caching & security-header config
+vercel.json                        Caching & security-header config
 .gitignore                         Ignores node_modules, .env, original photo drops
+LAUNCH-CHECKLIST.md                Step-by-step go-live checklist
 PLAN.md                            Business + funnel strategy
 ```
+
+Google Analytics (GA4 `G-FR49CR66EB`) is installed on every page. See **LAUNCH-CHECKLIST.md**
+for the full go-live steps.
 
 ## 15-minute go-live checklist
 
