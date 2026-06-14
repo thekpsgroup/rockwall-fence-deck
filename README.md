@@ -23,7 +23,7 @@ PLAN.md                            Business + funnel strategy
 
 1. **Set your business name, phone & email.** Find/replace across all files:
    - `Rockwall Fence & Deck` → your business name
-   - `(469) 555-0123` and `+14695550123` → your phone
+   - `(469) 887-1100` and `+14698871100` → your phone
    - `quotes@rockwallfenceanddeck.com` → your email
    - `rockwallfenceanddeck.com` → your real domain
 
