@@ -52,9 +52,7 @@
       <h3>Get Your Free Quote</h3>
       <p class="sub">Tell us about your project and add a couple photos — most quotes go out the same day.</p>
       <!-- ▼ SET YOUR FORM ENDPOINT (see README) ▼ -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_next" value="thank-you.html">
-        <input type="hidden" name="_subject" value="New quote request — Rockwall Fence &amp; Deck">
+      <form action="/api/send-quote" method="POST" enctype="multipart/form-data">
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
         <div class="field">
           <label>Name <span class="req">*</span></label>

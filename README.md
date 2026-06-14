@@ -27,12 +27,18 @@ PLAN.md                            Business + funnel strategy
    - `quotes@rockwallfenceanddeck.com` → your email
    - `rockwallfenceanddeck.com` → your real domain
 
-2. **Connect the quote form (this is what makes it work).**
-   The form needs a handler to email you submissions. Easiest free option:
-   - Create a free account at **Formspree.io** (or **Web3Forms.com**) — both support file/photo uploads.
-   - Copy your form endpoint and replace `https://formspree.io/f/YOUR_FORM_ID` in
-     `index.html` and `quote.html` (marked with a `▼ SET YOUR FORM ENDPOINT ▼` comment).
-   - Submissions, including photos, will land in your inbox; the visitor is sent to `thank-you.html`.
+2. **Connect the quote form (Resend).**
+   The forms POST to a serverless function at `api/send-quote.js`, which emails leads via Resend.
+   - Create an account at **resend.com** and generate an **API key**.
+   - In Vercel → your project → **Settings → Environment Variables**, add:
+     - `RESEND_API_KEY` = your Resend key (required)
+     - `LEAD_TO_EMAIL` = inbox for leads (optional; defaults to Karson@thekpsgroup.com)
+     - `LEAD_FROM_EMAIL` = verified sender (optional; defaults to Resend's onboarding sender)
+   - Redeploy so the env vars take effect.
+   - For a branded "from" address, verify `rockwallfenceanddeck.com` in Resend (add the DNS records
+     in Vercel → Domains), then set `LEAD_FROM_EMAIL` to
+     `Rockwall Fence & Deck <quotes@rockwallfenceanddeck.com>`.
+   - Submissions (including up to 4 photos) are emailed to you; the visitor is sent to `thank-you.html`.
 
 3. **Edit the prices.** The price tables on each service page use DFW-area ranges as placeholders.
    Update them once you've priced local lumber suppliers and your first few jobs.

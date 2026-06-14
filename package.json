@@ -1,0 +1,10 @@
+{
+  "name": "rockwall-fence-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rockwall Fence & Deck marketing site + quote form handler",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "resend": "^4.0.1"
+  }
+}
