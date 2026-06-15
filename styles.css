@@ -4,8 +4,8 @@
   --navy-2:#26392d;
   --blue:#3f7d4f;
   --teal:#6aa15a;
-  --cta:#c1632a;
-  --cta-d:#a8521f;
+  --cta:#a8521f;
+  --cta-d:#8f4419;
   --ink:#22271f;
   --muted:#5f6b5c;
   --line:#e6e9e0;
@@ -101,6 +101,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 .req{color:var(--cta)}
 .formnote{font-size:.82rem;color:var(--muted);margin-top:10px}
+.checks-error{color:var(--cta-d);font-size:.85rem;font-weight:600;margin:7px 0 0}
 
 /* cards / grid */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
@@ -195,6 +196,12 @@ footer.site ul li{margin-bottom:8px}
 
 /* sticky mobile cta */
 .mobilecta{display:none}
+
+/* respect reduced-motion preference */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .btn:hover,.card:hover,.shot:hover img{transform:none!important}
+}
 
 /* visible keyboard focus for all interactive elements */
 a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,.callbar:focus-visible,.check:focus-within,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f4b483;outline-offset:2px;border-radius:6px}

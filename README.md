@@ -50,7 +50,7 @@ for the full go-live steps.
    - For a branded "from" address, verify `rockwallfenceanddeck.com` in Resend (add the DNS records
      in Vercel → Domains), then set `LEAD_FROM_EMAIL` to
      `Rockwall Fence & Deck <quotes@rockwallfenceanddeck.com>`.
-   - Submissions (including up to 4 photos) are emailed to you; the visitor is sent to `thank-you.html`.
+   - Submissions (including up to 2 photos) are emailed to you; the visitor is sent to `thank-you.html`.
 
 3. **Edit the prices.** The price tables on each service page use DFW-area ranges as placeholders.
    Update them once you've priced local lumber suppliers and your first few jobs.

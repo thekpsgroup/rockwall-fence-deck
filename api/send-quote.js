@@ -53,6 +53,7 @@ module.exports = async (req, res) => {
       ["Approx. size", fields.size],
       ["Timeline", fields.timeline],
       ["Notes", fields.notes],
+      ["Source", fields.source],
     ].filter(([, v]) => v && String(v).trim());
 
     const html =

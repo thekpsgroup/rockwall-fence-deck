@@ -7,6 +7,24 @@
   var QUALITY = 0.8;     // JPEG quality
   var MAX_FILES = 2;     // photos to send
 
+  function servicesOk(form) {
+    var svc = form.querySelectorAll('input[name="service"]');
+    if (!svc.length) return true;
+    for (var i = 0; i < svc.length; i++) if (svc[i].checked) return true;
+    var checks = form.querySelector('.checks');
+    if (checks) {
+      if (!form.querySelector('.checks-error')) {
+        var msg = document.createElement('p');
+        msg.className = 'checks-error';
+        msg.textContent = 'Please pick at least one service.';
+        checks.parentNode.appendChild(msg);
+      }
+      checks.scrollIntoView({ block: 'center' });
+      svc[0].focus();
+    }
+    return false;
+  }
+
   var forms = document.querySelectorAll('form[enctype="multipart/form-data"]');
   Array.prototype.forEach.call(forms, function (form) {
     var input = form.querySelector('input[type="file"]');
@@ -15,6 +33,7 @@
 
     form.addEventListener('submit', function (e) {
       if (done) return;                              // already processed
+      if (!servicesOk(form)) { e.preventDefault(); return; }   // require a service
       var files = input.files;
       if (!files || !files.length) return;           // nothing to compress
       e.preventDefault();
