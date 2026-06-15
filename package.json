@@ -4,6 +4,7 @@
   "private": true,
   "description": "Rockwall Fence & Deck marketing site + quote form handler",
   "dependencies": {
+    "@vercel/blob": "^2.4.0",
     "busboy": "^1.6.0",
     "resend": "^4.0.1"
   }

@@ -4,9 +4,12 @@
 // Optional env vars:
 //   LEAD_TO_EMAIL    - where leads are sent (default below)
 //   LEAD_FROM_EMAIL  - verified Resend sender (default: Resend onboarding sender)
+//   BLOB_READ_WRITE_TOKEN - auto-set by the linked Vercel Blob store ("rockwall-leads").
+//                           Submitted photos are archived there (private) AND emailed.
 
 const Busboy = require("busboy");
 const { Resend } = require("resend");
+const { put } = require("@vercel/blob");
 
 const TO_DEFAULT = "sales@i30builders.com";
 // Until you verify your domain in Resend, this onboarding sender works to your own account email.
@@ -36,6 +39,32 @@ module.exports = async (req, res) => {
     const to = process.env.LEAD_TO_EMAIL || TO_DEFAULT;
     const from = process.env.LEAD_FROM_EMAIL || FROM_DEFAULT;
     const resend = new Resend(apiKey);
+
+    // Durable archive: store each photo in the private Vercel Blob store
+    // ("rockwall-leads"), in addition to attaching it to the lead email.
+    const blobRefs = [];
+    if (process.env.BLOB_READ_WRITE_TOKEN && files.length) {
+      const day = new Date().toISOString().slice(0, 10);
+      const who =
+        (fields.name || "lead")
+          .toString()
+          .replace(/[^a-z0-9]+/gi, "-")
+          .toLowerCase()
+          .slice(0, 40) || "lead";
+      for (const f of files.slice(0, 2)) {
+        try {
+          const ext = ((f.filename || "").match(/\.[a-z0-9]+$/i) || [".jpg"])[0];
+          const blob = await put(`leads/${day}/${who}${ext}`, f.content, {
+            access: "private",
+            addRandomSuffix: true,
+            contentType: f.mimeType || "image/jpeg",
+          });
+          blobRefs.push(blob.pathname);
+        } catch (e) {
+          console.error("send-quote: blob upload failed", e);
+        }
+      }
+    }
 
     const services = []
       .concat(fields.service || [])
@@ -68,7 +97,13 @@ module.exports = async (req, res) => {
         .join("") +
       "</table>" +
       (files.length
-        ? `<p style="font-family:Arial,sans-serif;color:#555">${files.length} photo(s) attached.</p>`
+        ? `<p style="font-family:Arial,sans-serif;color:#555">${files.length} photo(s) attached.` +
+          (blobRefs.length
+            ? ` Archived in private Blob storage (store: rockwall-leads) as: ${blobRefs
+                .map(escapeHtml)
+                .join(", ")}.`
+            : "") +
+          "</p>"
         : "");
 
     const attachments = files.slice(0, 2).map((f) => ({
@@ -146,6 +181,7 @@ function parseMultipart(req) {
         if (!tooBig && chunks.length) {
           files.push({
             filename: (info && info.filename) || "photo",
+            mimeType: (info && info.mimeType) || "image/jpeg",
             content: Buffer.concat(chunks),
           });
         }
