@@ -25,8 +25,8 @@ promote those into the "Recent Work" gallery in `index.html`.
 
 | Filename | Used on |
 |---|---|
-| `cedar-deck-railing-sunset.jpg` | Deck Building hero background |
-| `modern-composite-deck.jpg` | Deck Staining & Restoration hero background |
+| `cedar-deck-railing-sunset.webp` | Deck Building hero background |
+| `modern-composite-deck.webp` | Deck Staining & Restoration hero background |
 | `multi-level-deck-steps.jpg` | (spare — multi-level deck with steps) |
 | `deck-boards-texture.jpg` | (spare — composite deck-board texture) |
 
