@@ -5,9 +5,9 @@ claims that aren't true, so don't skip them.
 
 ## Before you go live
 
-- [ ] **Connect the lead form (Resend).** In Vercel → Project → Settings → Environment
-      Variables, add `RESEND_API_KEY`. Optional: `LEAD_TO_EMAIL` (defaults to
-      Karson@thekpsgroup.com) and `LEAD_FROM_EMAIL`. Redeploy after adding.
+- [x] **Lead form connected (Resend).** `RESEND_API_KEY` and `LEAD_TO_EMAIL`
+      (`sales@i30builders.com`) are set in Vercel. `LEAD_FROM_EMAIL` is optional once a
+      sending domain is verified in Resend (see note below). Redeploy after any env change.
 - [ ] **Test the form end-to-end.** Submit a real quote on the deployed site (with a photo)
       and confirm the email lands in your inbox. ⚠️ If `RESEND_API_KEY` is missing the
       visitor still sees the thank-you page — a broken form looks identical to a working one,

@@ -44,7 +44,7 @@ for the full go-live steps.
    - Create an account at **resend.com** and generate an **API key**.
    - In Vercel → your project → **Settings → Environment Variables**, add:
      - `RESEND_API_KEY` = your Resend key (required)
-     - `LEAD_TO_EMAIL` = inbox for leads (optional; defaults to Karson@thekpsgroup.com)
+     - `LEAD_TO_EMAIL` = inbox for leads (optional; defaults to sales@i30builders.com)
      - `LEAD_FROM_EMAIL` = verified sender (optional; defaults to Resend's onboarding sender)
    - Redeploy so the env vars take effect.
    - For a branded "from" address, verify `rockwallfenceanddeck.com` in Resend (add the DNS records

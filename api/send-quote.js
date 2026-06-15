@@ -8,7 +8,7 @@
 const Busboy = require("busboy");
 const { Resend } = require("resend");
 
-const TO_DEFAULT = "Karson@thekpsgroup.com";
+const TO_DEFAULT = "sales@i30builders.com";
 // Until you verify your domain in Resend, this onboarding sender works to your own account email.
 // After verifying rockwallfenceanddeck.com in Resend, set LEAD_FROM_EMAIL to e.g.
 //   "Rockwall Fence & Deck <quotes@rockwallfenceanddeck.com>"

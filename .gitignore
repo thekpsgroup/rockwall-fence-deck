@@ -17,3 +17,4 @@ fences/
 Thumbs.db
 
 .vercel
+.env*
