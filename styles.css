@@ -57,6 +57,8 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .nav .phone{font-weight:800;color:var(--navy)}
 .nav .btn{padding:11px 20px;font-size:.95rem}
 .menu-links{display:flex;align-items:center;gap:22px}
+.navtoggle{display:none;background:none;border:0;color:var(--navy);cursor:pointer;padding:6px;margin-left:auto;border-radius:8px}
+.navtoggle svg{width:28px;height:28px;display:block}
 
 /* hero */
 .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,#1a3322 100%);color:#fff;position:relative;overflow:hidden}
@@ -192,6 +194,7 @@ footer.site a:hover{color:#fff}
 footer.site ul{list-style:none;padding:0;margin:0}
 footer.site ul li{margin-bottom:8px}
 .fbrand{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:1.15rem;margin-bottom:10px}
+.fmeta{font-size:.85rem;color:#9fb097;margin-top:8px}
 .fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
 
 /* sticky mobile cta */
@@ -209,7 +212,12 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,.c
 /* responsive */
 @media(max-width:860px){
   .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .navtoggle{display:grid;place-items:center}
   .menu-links{display:none}
+  header.site.nav-open .menu-links{display:flex;flex-direction:column;align-items:stretch;gap:14px;position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 26px rgba(28,43,34,.14);padding:18px 20px}
+  header.site.nav-open .menu-links nav{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+  header.site.nav-open .menu-links .phone{font-size:1.1rem}
+  header.site.nav-open .menu-links .btn{justify-content:center}
   .fgrid{grid-template-columns:1fr 1fr}
   .arealist{columns:2}
   .banner{flex-direction:column;text-align:center}

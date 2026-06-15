@@ -10,3 +10,21 @@ document.addEventListener('click', function (e) {
     });
   }
 }, true);
+
+/* Mobile menu toggle */
+(function () {
+  var btn = document.querySelector('.navtoggle');
+  if (!btn) return;
+  var header = btn.closest('header.site');
+  if (!header) return;
+  btn.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  header.querySelectorAll('.menu-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      header.classList.remove('nav-open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
