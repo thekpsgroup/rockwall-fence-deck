@@ -30,7 +30,7 @@ claims that aren't true, so don't skip them.
 
 - [ ] **Google Business Profile.** Highest-impact move for "fence company near me" / Maps.
       Create/claim it, add photos, set the service area. (Free.)
-- [ ] **Google Search Console.** Add the property and submit `sitemap.xml`.
+- [x] **Google Search Console.** Property added. Sitemap: `https://www.rockwallfenceanddeck.com/sitemap.xml` (submit it in Search Console → Sitemaps if you haven't yet).
 - [ ] **Confirm Google Analytics is recording.** GA4 tag `G-FR49CR66EB` is installed on every
       page; the thank-you page fires a `generate_lead` event. In GA4 → Admin → Events, mark
       `generate_lead` as a **key event (conversion)** so you can measure leads.
