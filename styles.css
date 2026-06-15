@@ -62,11 +62,11 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,#1a3322 100%);color:#fff;position:relative;overflow:hidden}
 .hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(106,161,90,.35),transparent 70%);pointer-events:none}
 /* hero with a photo background + dark overlay for legibility */
-.hero.imgbg{background-image:linear-gradient(150deg,rgba(15,25,19,.92) 0%,rgba(17,29,22,.72) 45%,rgba(20,42,28,.6) 100%),var(--bg);background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero.imgbg{background-image:linear-gradient(150deg,rgba(13,22,17,.93) 0%,rgba(16,27,20,.8) 45%,rgba(18,38,26,.72) 100%),var(--bg);background-size:cover;background-position:center;background-repeat:no-repeat}
 .hero.imgbg:after{opacity:.7}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:64px;position:relative;z-index:1}
 .hero h1{color:#fff}
-.hero p{color:#d7e2d0;font-size:1.18rem}
+.hero p{color:#ecf2e8;font-size:1.18rem}
 .hero .trust{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0 26px;padding:0;list-style:none}
 .hero .trust li{display:flex;align-items:center;gap:8px;font-weight:600;color:#e3ecdd;font-size:.97rem}
 .hero .trust li b{color:var(--teal)}
@@ -184,6 +184,9 @@ footer.site ul li{margin-bottom:8px}
 /* sticky mobile cta */
 .mobilecta{display:none}
 
+/* visible keyboard focus for all interactive elements */
+a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,.callbar:focus-visible,.check:focus-within,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f4b483;outline-offset:2px;border-radius:6px}
+
 /* responsive */
 @media(max-width:860px){
   .hero .wrap{grid-template-columns:1fr;gap:32px}
@@ -191,13 +194,14 @@ footer.site ul li{margin-bottom:8px}
   .fgrid{grid-template-columns:1fr 1fr}
   .arealist{columns:2}
   .banner{flex-direction:column;text-align:center}
+  /* header nav/CTAs are hidden here, so surface the sticky call/quote bar */
+  .mobilecta{display:flex;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 14px;box-shadow:0 -6px 20px rgba(28,43,34,.14)}
+  .mobilecta .btn{flex:1;justify-content:center;padding:13px 8px;font-size:1rem;box-shadow:none}
+  body{padding-bottom:74px}
 }
 @media(max-width:560px){
   .section{padding:54px 0}
   .grid2,.checks{grid-template-columns:1fr}
   .arealist{columns:1}
   .fgrid{grid-template-columns:1fr}
-  .mobilecta{display:flex;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px 14px;box-shadow:0 -6px 20px rgba(28,43,34,.14)}
-  .mobilecta .btn{flex:1;justify-content:center;padding:13px 8px;font-size:1rem;box-shadow:none}
-  body{padding-bottom:74px}
 }
