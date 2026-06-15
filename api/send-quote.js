@@ -30,18 +30,9 @@ module.exports = async (req, res) => {
     // Honeypot — if a bot filled the hidden field, pretend success and drop it.
     if (fields._gotcha) return redirect(res, "/thank-you.html");
 
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      console.error("send-quote: RESEND_API_KEY is not set");
-      return redirect(res, "/thank-you.html");
-    }
-
-    const to = process.env.LEAD_TO_EMAIL || TO_DEFAULT;
-    const from = process.env.LEAD_FROM_EMAIL || FROM_DEFAULT;
-    const resend = new Resend(apiKey);
-
     // Durable archive: store each photo in the private Vercel Blob store
-    // ("rockwall-leads"), in addition to attaching it to the lead email.
+    // ("rockwall-leads") FIRST — independent of email, so photos are never
+    // lost even if the email send fails.
     const blobRefs = [];
     if (process.env.BLOB_READ_WRITE_TOKEN && files.length) {
       const day = new Date().toISOString().slice(0, 10);
@@ -65,6 +56,16 @@ module.exports = async (req, res) => {
         }
       }
     }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("send-quote: RESEND_API_KEY is not set");
+      return redirect(res, "/thank-you.html");
+    }
+
+    const to = process.env.LEAD_TO_EMAIL || TO_DEFAULT;
+    const from = process.env.LEAD_FROM_EMAIL || FROM_DEFAULT;
+    const resend = new Resend(apiKey);
 
     const services = []
       .concat(fields.service || [])
