@@ -1,37 +1,36 @@
 # Project photos
 
-Web-optimized images used across the site (resized to ~1600 px long edge, JPEG q82, progressive).
+Real project photos, web-optimized (resized to ~1600 px long edge, progressive JPEG q82).
+Hero backgrounds also have a WebP version (q62) that's preloaded for fast LCP.
 
-## Real project photos (yours) — shown in the homepage "Recent Work" gallery
+## Fences (homepage "Recent Work" gallery)
 
-| Filename | Photo |
+| File | Photo |
 |---|---|
-| `cedar-board-on-board-privacy-fence.jpg` | Dark-stained cedar board-on-board privacy fence with cap & trim |
-| `horizontal-cedar-fence-gate.jpg` | Horizontal cedar privacy fence with matching gate along a driveway |
-| `cedar-privacy-fence-steel-posts.jpg` | Cedar privacy fence built on galvanized steel posts |
-| `horizontal-cedar-fence-sloped-yard.jpg` | Horizontal cedar fence with gate stepped down a sloped yard |
-| `wrought-iron-ranch-fence.jpg` | Black ornamental iron fence on acreage |
-| `welded-wire-ranch-fence-gate.jpg` | Black welded-wire ranch fence with swing gate |
-| `pipe-top-field-fence.jpg` | Black pipe-top wire field/pasture fence |
+| `cedar-board-on-board-privacy-fence.jpg` | Dark-stained board-on-board cedar privacy fence |
+| `horizontal-cedar-fence-gate.jpg` | Horizontal cedar privacy fence with gate |
+| `cedar-privacy-fence-steel-posts.jpg` | Cedar privacy fence on galvanized steel posts |
+| `horizontal-cedar-fence-sloped-yard.jpg` | Horizontal cedar fence stepped down a slope |
+| `wrought-iron-ranch-fence.jpg` | Ornamental iron fence on acreage |
+| `welded-wire-ranch-fence-gate.jpg` | Welded-wire ranch fence with swing gate |
+| `pipe-top-field-fence.jpg` | Pipe-top wire field/pasture fence |
 
-Originals live in the (git-ignored) `../fences/` folder.
+## Decks (gallery + deck-page heroes)
 
-## Stock photos (illustrative) — used only as decorative hero backgrounds
-
-These are free, commercially-licensed photos from **Unsplash** (no attribution required). They are
-**not** presented as your completed jobs — they sit behind a dark overlay on the deck page heroes
-purely for visual appeal. Replace them with your own deck photos when you have them, and you can then
-promote those into the "Recent Work" gallery in `index.html`.
-
-| Filename | Used on |
+| File | Photo |
 |---|---|
-| `cedar-deck-railing-sunset.webp` | Deck Building hero background |
-| `modern-composite-deck.webp` | Deck Staining & Restoration hero background |
-| `multi-level-deck-steps.jpg` | (spare — multi-level deck with steps) |
-| `deck-boards-texture.jpg` | (spare — composite deck-board texture) |
+| `composite-deck-cable-rail.jpg` | Composite deck with black cable railing (Deck Building hero) |
+| `stained-cedar-deck-tree.jpg` | Stained cedar deck with steps, wraps a tree (Deck Staining hero) |
+| `cedar-deck-bench-steps.jpg` | Cedar deck with built-in bench |
 
-## Adding or replacing photos
+## Hero backgrounds (WebP, preloaded)
 
-- Keep JPGs ~1600 px on the long edge (≈300–500 KB each) so the page stays fast.
-- To replace a photo, overwrite the file with the same name — pages update automatically.
-- Gallery tiles crop to 4:3 (`object-fit: cover`); hero backgrounds use `--bg:url('images/…')`.
+Home → `horizontal-cedar-fence-gate.webp` · Fence Installation → `cedar-board-on-board-privacy-fence.webp`
+· Fence Repair → `cedar-privacy-fence-steel-posts.webp` · Deck Building → `composite-deck-cable-rail.webp`
+· Deck Staining → `stained-cedar-deck-tree.webp` · Service Area → `horizontal-cedar-fence-sloped-yard.webp`
+
+## Adding or replacing
+
+- Drop a JPG (~1600 px long edge) into `images/`, then reference it in the page.
+- Gallery tiles crop to 4:3 (`object-fit: cover`); hero backgrounds use `--bg:url('images/…')`
+  and have a matching `<link rel="preload">` in the page `<head>`.
