@@ -180,6 +180,17 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .faq details[open] summary:after{content:"–"}
 .faq details p{color:var(--muted);margin:0 0 14px}
 
+/* local landing pages: facts + neighborhood chips + city grid */
+.facts{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 26px}
+.facts li{font-size:.97rem;color:var(--muted)}
+.facts li b{color:var(--navy);font-weight:700}
+.hoods{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.hoods li{background:#fff;border:1px solid var(--line);border-radius:50px;padding:7px 14px;font-size:.9rem;font-weight:600;color:var(--navy)}
+.citygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:30px;list-style:none;padding:0}
+.citygrid a{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:700;color:var(--navy);transition:transform .14s,box-shadow .14s,border-color .14s}
+.citygrid a:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+.citygrid a span{display:block;font-weight:500;font-size:.85rem;color:var(--muted);margin-top:2px}
+
 /* area list */
 .arealist{columns:3;column-gap:24px;list-style:none;padding:0;margin:0}
 .arealist li{padding:7px 0;font-weight:600;break-inside:avoid}
