@@ -180,6 +180,11 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .faq details[open] summary:after{content:"–"}
 .faq details p{color:var(--muted);margin:0 0 14px}
 
+/* before / after project image */
+.beforeafter{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff}
+.beforeafter img{width:100%;height:auto;display:block}
+.beforeafter figcaption{padding:14px 18px;font-weight:600;color:var(--navy);font-size:.95rem}
+
 /* local landing pages: facts + neighborhood chips + city grid */
 .facts{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 26px}
 .facts li{font-size:.97rem;color:var(--muted)}
