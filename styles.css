@@ -150,6 +150,18 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);-w
 .bigicon svg{width:60px;height:60px;color:var(--teal)}
 .bigicon.ok svg{color:var(--ok)}
 
+/* trust bar (i30 Builders social proof) */
+.trustbar{background:#fff;border-bottom:1px solid var(--line)}
+.trustbar .wrap{display:flex;align-items:center;justify-content:center;gap:8px 16px;flex-wrap:wrap;padding:13px 20px;font-size:.95rem;font-weight:600;color:var(--navy);text-align:center}
+.trustbar .stars{color:#e8a33d;letter-spacing:2px}
+.trustbar .sep{color:var(--line)}
+
+/* testimonials */
+.tcard{margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.tcard .stars{color:#e8a33d;letter-spacing:2px;font-size:1.05rem}
+.tcard blockquote{margin:0;font-size:1.02rem;line-height:1.55;color:var(--ink)}
+.tcard figcaption{color:var(--muted);font-weight:600;font-size:.92rem;margin-top:auto}
+
 /* price table */
 .ptable{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .ptable th,.ptable td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
